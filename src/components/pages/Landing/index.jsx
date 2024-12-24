@@ -4,7 +4,8 @@ import barGraph from '../../../assets/bar-graph.png';
 import paperStack from '../../../assets/paper-stack.jpg';
 import { useNavigate } from 'react-router-dom';
 import { useDownloadData } from '../../../hooks/useDownloadData.js';
-import {decodeBase64} from '../../../utils/decodeBase64.js';
+import {NavLink} from "react-router-dom"
+// import {decodeBase64} from '../../../utils/decodeBase64.js';
 
 /**
  * TODO: Ticket 1:
@@ -16,7 +17,7 @@ export const LandingPage = () => {
   const { downloadCSV } = useDownloadData();
 
   const scrollToTop = () => {
-    let scrollStep = -window.scrollY / 20; // Adjust the divisor for speed
+    let scrollStep = -window.scrollY / 35; // Adjust the divisor for speed
     let scrollInterval = setInterval(() => {
       if (window.scrollY === 0) {
         clearInterval(scrollInterval);
@@ -54,7 +55,10 @@ export const LandingPage = () => {
           </div>
         </div>
         <div className='flex justify-center gap-10 pb-10 '>
-            <button className='primary-btn py-2 px-4 text-white font-bold'>View the Data</button>
+          <NavLink to='/graphs'>
+          <button className='primary-btn py-2 px-4 text-white font-bold'>View the Data</button>
+          </NavLink>
+            
             <button className='primary-btn py-2 px-4 text-white font-bold'>Download the Data</button>
         </div>
       </section>
@@ -82,11 +86,14 @@ export const LandingPage = () => {
             <p className='text-[18px]'>Between fiscal year 2017 and 2020, the New York asylum office's average grant rate was 6 times lower than the San Francisco asylum office.</p>
           </div>
         </div>
+        <NavLink to='https://www.humanrightsfirst.org/'>
+          <div>
+          <button className='primary-c py-2 px-4 w-[120px] text-white'>Read More</button>
+          </div>
+        </NavLink>
         <div>
-        <button className='primary-c py-2 px-4 w-[120px] text-white'>Read More</button>
+        <button onClick={() => scrollToTop()} className='py-2 px-4'>Back To Top ^</button>
         </div>
-        
-        <button>Back To Top ^</button>
       </section>
     </div>
   );
