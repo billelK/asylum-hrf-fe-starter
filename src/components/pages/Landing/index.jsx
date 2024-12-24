@@ -66,6 +66,28 @@ export const LandingPage = () => {
         <p className='text-xl'>Human Rights First has created a search tool to give you a user-friendly way to explore a data set of asylum decisions between FY 2016 and May 2021 by the USCIS Asylum Office, which we received through a Freedom of Information Act request. You can search for information on asylum grant rates by year, nationality, and asylum office, visualize the data with charts and heat maps, and download the data set.</p>
         </div>
       </section>
+      <section className='flex-c gap-16 align-center pb-10'>
+        <h1 className='text-5xl'>Systemic Disparity Insights</h1>
+        <div className='flex justify-around gap-10 m-14'>
+          <div className='flex-c-1 gap-10'>
+            <h1 className='text-4xl'>36%</h1>
+            <p className='text-[18px]'>By the end of the Trump administration, the average asylum office grant rate had fallen 36% from an average of 44 percent in fiscal year 2016 to 28 percent in fiscal year 20202.</p>
+          </div>
+          <div className='flex-c-1 gap-10'>
+            <h1 className='text-4xl'>5%</h1>
+            <p className='text-[18px]'>The New York asylum office grant rate dropped to 5 percent in fiscal year 2020.</p>
+          </div>
+          <div className='flex-c-1 gap-10'>
+            <h1 className='text-4xl'>6x Lower</h1>
+            <p className='text-[18px]'>Between fiscal year 2017 and 2020, the New York asylum office's average grant rate was 6 times lower than the San Francisco asylum office.</p>
+          </div>
+        </div>
+        <div>
+        <button className='primary-c py-2 px-4 w-[120px] text-white'>Read More</button>
+        </div>
+        
+        <button>Back To Top ^</button>
+      </section>
     </div>
   );
 };
