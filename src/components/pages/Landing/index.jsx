@@ -4,7 +4,6 @@ import barGraph from '../../../assets/bar-graph.png';
 import paperStack from '../../../assets/paper-stack.jpg';
 import { useNavigate } from 'react-router-dom';
 import { useDownloadData } from '../../../hooks/useDownloadData.js';
-import {NavLink} from "react-router-dom"
 // import {decodeBase64} from '../../../utils/decodeBase64.js';
 
 /**
@@ -29,6 +28,7 @@ export const LandingPage = () => {
 
   const handleReadMore = () => {
     // TODO: navigate to the humanrightsfirst.org homepage
+   window.location.href = 'https://www.humanrightsfirst.org/'
   };
 
   return (
@@ -55,11 +55,10 @@ export const LandingPage = () => {
           </div>
         </div>
         <div className='flex justify-center gap-10 pb-10 '>
-          <NavLink to='/graphs'>
-          <button className='primary-btn py-2 px-4 text-white font-bold'>View the Data</button>
-          </NavLink>
+          <button onClick={() => navigate('/graphs')} className='primary-btn py-2 px-4 text-white font-bold'>View the Data</button>
+          
             
-            <button className='primary-btn py-2 px-4 text-white font-bold'>Download the Data</button>
+            <button onClick={() => downloadCSV()} className='primary-btn py-2 px-4 text-white font-bold'>Download the Data</button>
         </div>
       </section>
       <section className='flex'>
@@ -86,11 +85,9 @@ export const LandingPage = () => {
             <p className='text-[18px]'>Between fiscal year 2017 and 2020, the New York asylum office's average grant rate was 6 times lower than the San Francisco asylum office.</p>
           </div>
         </div>
-        <NavLink to='https://www.humanrightsfirst.org/'>
           <div>
-          <button className='primary-c py-2 px-4 w-[120px] text-white'>Read More</button>
+          <button onClick={() => handleReadMore()} className='primary-c py-2 px-4 w-[120px] text-white'>Read More</button>
           </div>
-        </NavLink>
         <div>
         <button onClick={() => scrollToTop()} className='py-2 px-4'>Back To Top ^</button>
         </div>
