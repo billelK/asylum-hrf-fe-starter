@@ -15,19 +15,26 @@ const useAppContextProvider = () => {
   const [graphData, setGraphData] = useState(testData);
   const [isDataLoading, setIsDataLoading] = useState(false);
 
+
   useLocalStorage({ graphData, setGraphData });
 
-  const getFiscalData = () => {
-    // TODO: Replace this with functionality to retrieve the data from the fiscalSummary endpoint
-    const fiscalDataRes = testData;
-    return fiscalDataRes;
-  };
+  const getFiscalData = async () => {
+    try {
+        const res = await axios.get("https://hrf-asylum-be-b.herokuapp.com/cases/fiscalSummary");
+        return res.data
+    } catch (err) {
+        console.error("Error fetching fiscal data:", err);
+    }
+};
 
-  const getCitizenshipResults = async () => {
-    // TODO: Replace this with functionality to retrieve the data from the citizenshipSummary endpoint
-    const citizenshipRes = testData.citizenshipResults;
-    return citizenshipRes;
-  };
+const getCitizenshipResults = async () => {
+  try {
+      const res = await axios.get("https://hrf-asylum-be-b.herokuapp.com/cases/citizenshipSummary");
+      return res.data
+  } catch (err) {
+      console.error("Error fetching citizenship results:", err)
+  }
+};
 
   const updateQuery = async () => {
     setIsDataLoading(true);
@@ -35,7 +42,16 @@ const useAppContextProvider = () => {
 
   const fetchData = async () => {
     // TODO: fetch all the required data and set it to the graphData state
-  };
+
+    const fiscalData = await getFiscalData();
+    const citizenshipResults = await getCitizenshipResults();
+    setIsDataLoading(false)
+    console.log(fiscalData, citizenshipResults);
+
+    if (fiscalData && citizenshipResults) {
+        setGraphData({ ...fiscalData, citizenshipResults });
+    }
+};
 
   const clearQuery = () => {
     setGraphData({});

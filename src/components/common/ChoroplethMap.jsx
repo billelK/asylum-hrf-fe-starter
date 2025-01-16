@@ -5,7 +5,8 @@ import { useAppContext } from '../../context/AppContext.jsx';
 
 export const ChoroplethMap = () => {
   const { graphData } = useAppContext();
-
+  
+  
   const citizenshipResults = graphData?.citizenshipResults ?? [];
   const locations = citizenshipResults.map(({ citizenship }) => citizenship);
   const z = citizenshipResults.map(({ granted }) => granted?.toFixed(2) ?? 0);
