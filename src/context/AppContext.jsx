@@ -46,8 +46,7 @@ const getCitizenshipResults = async () => {
     const fiscalData = await getFiscalData();
     const citizenshipResults = await getCitizenshipResults();
     setIsDataLoading(false)
-    console.log(fiscalData, citizenshipResults);
-
+    
     if (fiscalData && citizenshipResults) {
         setGraphData({ ...fiscalData, citizenshipResults });
     }
