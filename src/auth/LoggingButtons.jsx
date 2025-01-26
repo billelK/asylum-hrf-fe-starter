@@ -11,17 +11,17 @@ export const LoggingButtons = () => {
     loginWithRedirect,
     logout
   } = useAuth0();
-  // const isAuthenticated = false;
+  
 
   const buttonText = isAuthenticated ? 'Log Out' : 'Log In';
 
   const handleLogging = () => {
     if (isAuthenticated) {
       // TODO: Add Logout functionality here:
-      return logout
+      return logout()
     } else {
       // TODO: Add Redirect functionality here:
-      return loginWithRedirect
+      return loginWithRedirect()
     }
   };
 

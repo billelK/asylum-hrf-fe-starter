@@ -12,8 +12,7 @@ export default function Header() {
     const {
       isAuthenticated,
     } = useAuth0();
-  // const isAuthenticated = false;
-
+  
   return (
     <header className='flex w-[100%] primary-c justify-between px-14'>
       <div className='flex justify-between'>
