@@ -15,14 +15,13 @@ const Profile = () => {
     logout
   } = useAuth0()
   
-  // user.picture = undefined
 
   if (isLoading || !user) {
     return <div className='text-center p-4'>Loading...</div>;
   }
 
   return (
-    <div className='flex-c gap-4 bg-white w-[250px] m-auto rounded-2xl'> 
+    <div className='flex-c gap-4 bg-white w-[250px] m-auto rounded-2xl shadow-lg'> 
       <img className="rounded-full h-[100px] w-[100px] m-auto mt-[25px]" src={user.picture} alt="" />
       <h3 className='font-bold'>{user.email}</h3>
       <p className='text-xs pb-[10px]'>{user.email}</p>

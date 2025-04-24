@@ -1,4 +1,3 @@
-import Logo from '../../assets/logo.png';
 import { LoggingButtons } from '../../auth/LoggingButtons.jsx';
 import { NavLink } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react'
@@ -17,7 +16,7 @@ export default function Header() {
     <header className='flex w-[100%] primary-c justify-between px-14'>
       <div className='flex justify-between'>
         <NavLink to='https://www.humanrightsfirst.org/'>
-          <img className='w-[100px]' src={Logo} alt='HRF logo white' />
+          <img className='w-[100px]' src="/assets/logo.png" alt='HRF logo white' />
         </NavLink>
       </div>
       <div className='flex items-center py-4 gap-16'>

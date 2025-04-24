@@ -1,7 +1,3 @@
-import pieChart from '../../../assets/pie-chart.png';
-import lineGraph from '../../../assets/line-graph.png';
-import barGraph from '../../../assets/bar-graph.png';
-import paperStack from '../../../assets/paper-stack.jpg';
 import { useNavigate } from 'react-router-dom';
 import { useDownloadData } from '../../../hooks/useDownloadData.js';
 // import {decodeBase64} from '../../../utils/decodeBase64.js';
@@ -42,15 +38,15 @@ export const LandingPage = () => {
       <section className='flex-c'>
         <div className='flex justify-center pt-10 m-14 gap-20'>
           <div>
-          <img className='h-[300px] w-[500px]' src={barGraph} alt="barGraph" />
+          <img className='h-[300px] w-[500px]' src="/assets/bar-graph.png" alt="barGraph" />
           <h3 className='py-5 text-2xl'>Search Grant Rates By Office</h3>
           </div>
           <div>
-          <img className='h-[300px]' src={pieChart} alt="pieChart" />
+          <img className='h-[300px]' src="/assets/pie-chart.png" alt="pieChart" />
           <h3 className='py-5 text-2xl'>Search Grant Rates By Nationality</h3>
           </div>
           <div>
-          <img className='h-[300px] w-[500px]' src={lineGraph} alt="lineGraph" />
+          <img className='h-[300px] w-[500px]' src="/assets/line-graph.png" alt="lineGraph" />
           <h3 className='py-5 text-2xl'>Search Grant Rates Over Time</h3>
           </div>
         </div>
@@ -63,7 +59,7 @@ export const LandingPage = () => {
       </section>
       <section className='flex'>
         <div className='p-20 w-[50%] content-center'>
-        <img className='w-[100%] h-[70%] rounded-2xl' src={paperStack} alt="paperStack" />
+        <img className='w-[100%] h-[70%] rounded-2xl' src="/assets/paper-stack.jpg" alt="paperStack" />
         </div>
         <div className='p-20 w-[50%] content-center'>
         <p className='text-xl'>Human Rights First has created a search tool to give you a user-friendly way to explore a data set of asylum decisions between FY 2016 and May 2021 by the USCIS Asylum Office, which we received through a Freedom of Information Act request. You can search for information on asylum grant rates by year, nationality, and asylum office, visualize the data with charts and heat maps, and download the data set.</p>
