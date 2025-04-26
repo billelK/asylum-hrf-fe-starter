@@ -3,6 +3,8 @@ import { useAppContext } from '../context/AppContext.jsx';
 
 export const useDownloadData = () => {
   const { graphData } = useAppContext();
+  console.log(graphData);
+  
 
   const filename = 'asylum_data.csv';
 

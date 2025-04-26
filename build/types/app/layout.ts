@@ -1,4 +1,4 @@
-// File: D:\Bloom projects\Labs\asylum-hrf-fe-starter\src\app\layout.tsx
+// File: D:\Bloom projects\Labs\asylum-hrf-fe-starter\src\app\layout.jsx
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
