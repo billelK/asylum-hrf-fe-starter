@@ -1,4 +1,4 @@
-'use client';  // <-- VERY important!!
+'use client';  
 
 import { Auth0Provider } from '@auth0/auth0-react';
 import { ProvideAppContext } from '../context/AppContext.jsx';
@@ -21,7 +21,7 @@ export function Providers({ children }) {
     return null;
   }
 
-  console.log(redirectUri);
+  // console.log(redirectUri);
   
   
   return (

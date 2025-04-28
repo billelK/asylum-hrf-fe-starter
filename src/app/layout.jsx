@@ -1,5 +1,5 @@
 import {Providers} from "./Providers"
-import "../index.css"
+import "./globals.css"
 
 export const metadata = {
   title: 'HRF | Grant Rate Tracker',

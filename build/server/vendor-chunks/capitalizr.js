@@ -1,0 +1,24 @@
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+exports.id = "vendor-chunks/capitalizr";
+exports.ids = ["vendor-chunks/capitalizr"];
+exports.modules = {
+
+/***/ "(ssr)/./node_modules/capitalizr/index.js":
+/*!******************************************!*\
+  !*** ./node_modules/capitalizr/index.js ***!
+  \******************************************/
+/***/ ((module) => {
+
+eval("function capitalizr(str, option = 0) {\n  /**\n   * Capitalizes letters in a string based on the specified option.\n   *\n   * @param {string} str - The input string to capitalize.\n   * @param {number} [option=0] - The capitalization option:\n   *   - 0 (default): Capitalizes only the first letter of the entire string.\n   *   - 1: Capitalizes the first letter of each word in the string.\n   *   - 2: Capitalizes the first letter of each sentence in the string, where sentences are separated by \". \".\n   * @returns {string} - The capitalized string.\n   *\n   * @example\n   * capitalizr(\"hello world\"); // \"Hello world\"\n   * capitalizr(\"hello world\", 1); // \"Hello World\"\n   * capitalizr(\"hello world. i am a fish.\", 2); // \"Hello world. I am a fish.\"\n  */\n  if (str.length === 0) return str;\n\n  if (option === 1) {\n      return str\n          .split(' ')\n          .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())\n          .join(' ');\n  } else if (option === 2) {\n      return str\n          .split('. ')\n          .map(sentence => sentence.charAt(0).toUpperCase() + sentence.slice(1).toLowerCase())\n          .join('. ');\n  } else {\n      return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();\n  }\n}\n\nmodule.exports = capitalizr;\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHNzcikvLi9ub2RlX21vZHVsZXMvY2FwaXRhbGl6ci9pbmRleC5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGFBQWEsUUFBUTtBQUNyQixhQUFhLFFBQVE7QUFDckI7QUFDQTtBQUNBO0FBQ0EsZUFBZSxRQUFRO0FBQ3ZCO0FBQ0E7QUFDQSxnQ0FBZ0M7QUFDaEMsbUNBQW1DO0FBQ25DLGlEQUFpRDtBQUNqRDtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxJQUFJO0FBQ0o7QUFDQTtBQUNBO0FBQ0E7QUFDQSxJQUFJO0FBQ0o7QUFDQTtBQUNBOztBQUVBIiwic291cmNlcyI6WyJEOlxcQmxvb20gcHJvamVjdHNcXExhYnNcXGFzeWx1bS1ocmYtZmUtc3RhcnRlclxcbm9kZV9tb2R1bGVzXFxjYXBpdGFsaXpyXFxpbmRleC5qcyJdLCJzb3VyY2VzQ29udGVudCI6WyJmdW5jdGlvbiBjYXBpdGFsaXpyKHN0ciwgb3B0aW9uID0gMCkge1xuICAvKipcbiAgICogQ2FwaXRhbGl6ZXMgbGV0dGVycyBpbiBhIHN0cmluZyBiYXNlZCBvbiB0aGUgc3BlY2lmaWVkIG9wdGlvbi5cbiAgICpcbiAgICogQHBhcmFtIHtzdHJpbmd9IHN0ciAtIFRoZSBpbnB1dCBzdHJpbmcgdG8gY2FwaXRhbGl6ZS5cbiAgICogQHBhcmFtIHtudW1iZXJ9IFtvcHRpb249MF0gLSBUaGUgY2FwaXRhbGl6YXRpb24gb3B0aW9uOlxuICAgKiAgIC0gMCAoZGVmYXVsdCk6IENhcGl0YWxpemVzIG9ubHkgdGhlIGZpcnN0IGxldHRlciBvZiB0aGUgZW50aXJlIHN0cmluZy5cbiAgICogICAtIDE6IENhcGl0YWxpemVzIHRoZSBmaXJzdCBsZXR0ZXIgb2YgZWFjaCB3b3JkIGluIHRoZSBzdHJpbmcuXG4gICAqICAgLSAyOiBDYXBpdGFsaXplcyB0aGUgZmlyc3QgbGV0dGVyIG9mIGVhY2ggc2VudGVuY2UgaW4gdGhlIHN0cmluZywgd2hlcmUgc2VudGVuY2VzIGFyZSBzZXBhcmF0ZWQgYnkgXCIuIFwiLlxuICAgKiBAcmV0dXJucyB7c3RyaW5nfSAtIFRoZSBjYXBpdGFsaXplZCBzdHJpbmcuXG4gICAqXG4gICAqIEBleGFtcGxlXG4gICAqIGNhcGl0YWxpenIoXCJoZWxsbyB3b3JsZFwiKTsgLy8gXCJIZWxsbyB3b3JsZFwiXG4gICAqIGNhcGl0YWxpenIoXCJoZWxsbyB3b3JsZFwiLCAxKTsgLy8gXCJIZWxsbyBXb3JsZFwiXG4gICAqIGNhcGl0YWxpenIoXCJoZWxsbyB3b3JsZC4gaSBhbSBhIGZpc2guXCIsIDIpOyAvLyBcIkhlbGxvIHdvcmxkLiBJIGFtIGEgZmlzaC5cIlxuICAqL1xuICBpZiAoc3RyLmxlbmd0aCA9PT0gMCkgcmV0dXJuIHN0cjtcblxuICBpZiAob3B0aW9uID09PSAxKSB7XG4gICAgICByZXR1cm4gc3RyXG4gICAgICAgICAgLnNwbGl0KCcgJylcbiAgICAgICAgICAubWFwKHdvcmQgPT4gd29yZC5jaGFyQXQoMCkudG9VcHBlckNhc2UoKSArIHdvcmQuc2xpY2UoMSkudG9Mb3dlckNhc2UoKSlcbiAgICAgICAgICAuam9pbignICcpO1xuICB9IGVsc2UgaWYgKG9wdGlvbiA9PT0gMikge1xuICAgICAgcmV0dXJuIHN0clxuICAgICAgICAgIC5zcGxpdCgnLiAnKVxuICAgICAgICAgIC5tYXAoc2VudGVuY2UgPT4gc2VudGVuY2UuY2hhckF0KDApLnRvVXBwZXJDYXNlKCkgKyBzZW50ZW5jZS5zbGljZSgxKS50b0xvd2VyQ2FzZSgpKVxuICAgICAgICAgIC5qb2luKCcuICcpO1xuICB9IGVsc2Uge1xuICAgICAgcmV0dXJuIHN0ci5jaGFyQXQoMCkudG9VcHBlckNhc2UoKSArIHN0ci5zbGljZSgxKS50b0xvd2VyQ2FzZSgpO1xuICB9XG59XG5cbm1vZHVsZS5leHBvcnRzID0gY2FwaXRhbGl6cjtcbiJdLCJuYW1lcyI6W10sImlnbm9yZUxpc3QiOlswXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(ssr)/./node_modules/capitalizr/index.js\n");
+
+/***/ })
+
+};
+;

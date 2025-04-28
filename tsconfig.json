@@ -28,7 +28,7 @@
     "build/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/app/layout.jsx"  ],
+, "src/app/layout.jsx", "next.config.ts"  ],
   "exclude": [
     "node_modules"
   ]

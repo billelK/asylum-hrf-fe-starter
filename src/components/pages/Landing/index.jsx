@@ -1,4 +1,5 @@
-import { useNavigate } from 'react-router-dom';
+'use client'
+// import { useNavigate } from 'react-router-dom';
 import { useDownloadData } from '../../../hooks/useDownloadData.js';
 // import {decodeBase64} from '../../../utils/decodeBase64.js';
 
@@ -8,7 +9,7 @@ import { useDownloadData } from '../../../hooks/useDownloadData.js';
  * Implement any button functionality implied by the landing page screenshot example (tickets/examples)
  */
 export const LandingPage = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const { downloadCSV } = useDownloadData();
 
   const scrollToTop = () => {
@@ -30,9 +31,9 @@ export const LandingPage = () => {
   return (
     <div className='flex-c w-[100vw] secondary-c content-around'>
       <section>
-        <div className='primary-c flex-c space-between mx-auto'>
-            <h1 className='text-6xl py-5 text-white'>Asylum Office Grant Rate Tracker</h1>
-            <h3 className='py-5 text-white'>The Asylum Office Grant Rate Tracker provides asylum seekers, researchers, policymakers, and the public an interactive tool to explore USCIS data on Asylum Office decisions</h3>
+        <div className='primary-c flex-c space-between mx-auto text-center'>
+            <h1 className='text-6xl py-5 text-white '>Asylum Office Grant Rate Tracker</h1>
+            <h3 className='py-5 text-white '>The Asylum Office Grant Rate Tracker provides asylum seekers, researchers, policymakers, and the public an interactive tool to explore USCIS data on Asylum Office decisions</h3>
         </div>
       </section>
       <section className='flex-c'>
@@ -65,8 +66,8 @@ export const LandingPage = () => {
         <p className='text-xl'>Human Rights First has created a search tool to give you a user-friendly way to explore a data set of asylum decisions between FY 2016 and May 2021 by the USCIS Asylum Office, which we received through a Freedom of Information Act request. You can search for information on asylum grant rates by year, nationality, and asylum office, visualize the data with charts and heat maps, and download the data set.</p>
         </div>
       </section>
-      <section className='flex-c gap-16 align-center pb-10'>
-        <h1 className='text-5xl'>Systemic Disparity Insights</h1>
+      <section className='flex-c gap-16 align-center pb-10 text-center'>
+        <h1 className='text-5xl '>Systemic Disparity Insights</h1>
         <div className='flex justify-around gap-10 m-14'>
           <div className='flex-c-1 gap-10'>
             <h1 className='text-4xl'>36%</h1>

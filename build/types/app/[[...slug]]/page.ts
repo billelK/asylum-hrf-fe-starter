@@ -1,4 +1,4 @@
-// File: D:\Bloom projects\Labs\asylum-hrf-fe-starter\src\app\[[...slug]]\page.js
+// File: D:\Bloom projects\Labs\asylum-hrf-fe-starter\src\app\[[...slug]]\page.jsx
 import * as entry from '../../../../src/app/[[...slug]]/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
