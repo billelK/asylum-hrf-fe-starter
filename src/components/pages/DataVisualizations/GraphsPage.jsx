@@ -10,7 +10,7 @@ export const GraphsPage = () => {
 
   return (
     <div className='secondary-c'>
-      <div className='plot-main flex w-[70%] gap-10 mx-auto justify-end'>
+      <div className='plot-main flex w-[70%] gap-10 mx-auto justify-end pb-'>
         <div className='plot-main flex-c'>
           <h1 className='py-5'>{getGraphsHeader(mapView)}</h1>
           <section className='maps'>{getMapView(mapView)}</section>

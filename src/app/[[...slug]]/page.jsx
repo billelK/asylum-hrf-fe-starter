@@ -3,7 +3,6 @@ import { notFound, redirect } from 'next/navigation';
 import { LandingPage } from '../../components/pages/Landing/index';
 import { GraphsPage } from '../../components/pages/DataVisualizations/GraphsPage';
 import Profile from '../../components/pages/Profile/index';
-import { pageWrapper } from '../../components/layout/PageWrapper';
 import { ProvideAppContext } from '../../context/AppContext'; // <-- Import your context here
 
 export function generateStaticParams() {
@@ -34,7 +33,7 @@ export default function Page({ params }) {
 
   return (
     <ProvideAppContext>
-      {pageWrapper(content)}
+        {content}
     </ProvideAppContext>
   );
 }

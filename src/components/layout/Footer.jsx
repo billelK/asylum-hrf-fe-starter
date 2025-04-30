@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className='flex-c w-[100%] primary-c justify-between px-14 text-amber-50 text-center'>
-      <section className='footer-details flex pt-4 pb-8 relative'>
+    <footer className='flex-c w-[100%] primary-c justify-between px-14  gap-14 text-amber-50 text-center '>
+      <section className='footer-details flex pt-4 pb-8 relative '>
         <div className='flex justify-between absolute top-4 left-0'>
           <a href='https://www.humanrightsfirst.org/'>
             <img className='w-[100px]' src="/assets/logo.png" alt='HRF logo white' />
