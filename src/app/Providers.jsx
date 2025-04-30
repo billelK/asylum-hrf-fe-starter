@@ -30,6 +30,7 @@ export function Providers({ children }) {
       clientId={AUTH_CLIENT_ID}
       authorizationParams={{
         redirect_uri: redirectUri,
+        audience: 'https://dev-1zaqg1n564e6azll.us.auth0.com/api/v2/'
       }}
     >
       <ProvideAppContext>

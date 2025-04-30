@@ -502,6 +502,39 @@ video {
 [hidden]:where(:not([hidden="until-found"])) {
   display: none;
 }
+.container {
+  width: 100%;
+}
+@media (min-width: 640px) {
+
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+
+  .container {
+    max-width: 1536px;
+  }
+}
 .fixed {
   position: fixed;
 }
@@ -536,6 +569,12 @@ video {
 .mt-\[25px\] {
   margin-top: 25px;
 }
+.mb-\[15px\] {
+  margin-bottom: 15px;
+}
+.mt-\[15px\] {
+  margin-top: 15px;
+}
 .flex {
   display: flex;
 }
@@ -551,11 +590,17 @@ video {
 .h-\[70\%\] {
   height: 70%;
 }
+.h-auto {
+  height: auto;
+}
 .h-full {
   height: 100%;
 }
 .min-h-\[400px\] {
   min-height: 400px;
+}
+.min-h-screen {
+  min-height: 100vh;
 }
 .w-\[100\%\] {
   width: 100%;
@@ -583,6 +628,12 @@ video {
 }
 .w-full {
   width: 100%;
+}
+.flex-grow {
+  flex-grow: 1;
+}
+.flex-col {
+  flex-direction: column;
 }
 .content-center {
   align-content: center;
@@ -654,6 +705,10 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.bg-gray-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
 .bg-opacity-40 {
   --tw-bg-opacity: 0.4;
 }
@@ -668,6 +723,12 @@ video {
 }
 .p-5 {
   padding: 1.25rem;
+}
+.p-8 {
+  padding: 2rem;
+}
+.p-\[\] {
+  padding: ;
 }
 .px-14 {
   padding-left: 3.5rem;
@@ -692,6 +753,54 @@ video {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.py-\[\] {
+  padding-top: ;
+  padding-bottom: ;
+}
+.py-\[50\] {
+  padding-top: 50;
+  padding-bottom: 50;
+}
+.py-\[50\%\] {
+  padding-top: 50%;
+  padding-bottom: 50%;
+}
+.py-\[10\%\] {
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+.py-\[\%\] {
+  padding-top: %;
+  padding-bottom: %;
+}
+.py-\[5\%\] {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.py-\[200px\] {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+.py-\[1150px\] {
+  padding-top: 1150px;
+  padding-bottom: 1150px;
+}
+.py-\[150px\] {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+.py-\[100px\] {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.py-\[120px\] {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .pb-10 {
   padding-bottom: 2.5rem;
