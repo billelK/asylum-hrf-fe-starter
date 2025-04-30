@@ -1,5 +1,5 @@
 'use client'
-// import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation.js';
 import { useDownloadData } from '../../../hooks/useDownloadData.js';
 
 
@@ -9,7 +9,7 @@ import { useDownloadData } from '../../../hooks/useDownloadData.js';
  * Implement any button functionality implied by the landing page screenshot example (tickets/examples)
  */
 export const LandingPage = () => {
-  // const navigate = useNavigate();
+  const navigate = useRouter();
   const { downloadCSV } = useDownloadData();
 
   const scrollToTop = () => {
@@ -52,7 +52,7 @@ export const LandingPage = () => {
           </div>
         </div>
         <div className='flex justify-center gap-10 pb-10 '>
-          <button onClick={() => navigate('/graphs')} className='primary-btn py-2 px-4 text-white font-bold'>View the Data</button>
+          <button onClick={() => navigate.push('/graphs')} className='primary-btn py-2 px-4 text-white font-bold'>View the Data</button>
           
             
             <button onClick={() => downloadCSV()} className='primary-btn py-2 px-4 text-white font-bold'>Download the Data</button>
